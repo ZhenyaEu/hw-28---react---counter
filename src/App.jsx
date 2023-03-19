@@ -1,30 +1,14 @@
-import { useState } from "react";
-import Button from "./Button";
 
-const App = () => {
-console.log(useState);
-  const [count, setCount] = useState(0);
+import Users from "./components/Users";
 
 
-  const incrementValue = () => {
-    setCount(count + 1);
-  }
-
-  const decrementValue = () => {
-    setCount(count - 1);
-  }
-
+function App() {
+  
   return (
-    <div>
-    <div>{count}</div>
-    <div>
-    <Button text="Increment" onClick={incrementValue} />
+    <div className='main'>
+      <Users />
     </div>
-    <div>
-    <Button text="Derement" onClick={decrementValue} />
-    </div>
-    </div>
-  )
+  );
 }
 
 export default App;
